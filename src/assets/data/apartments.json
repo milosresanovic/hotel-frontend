@@ -1,0 +1,256 @@
+[
+  {
+    "id": 1,
+    "name": "Apartman 1",
+    "description": "Opis apartmana 1",
+    "capacity": 3,
+    "size": 35,
+    "category_id": 1,
+    "equipments": [1, 2, 3],
+    "image": "room-1.jpg",
+    "price": 99,
+    "comments": [
+      {
+        "user": "David Stevic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Ovo je bas dobar apartman.",
+        "starNumber": 5
+      },
+      {
+        "user": "Nenad Jevtic",
+        "user_image" : "avatar-2.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Sve super.",
+        "starNumber": 4
+      },
+      {
+        "user": "Jovan Vasic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Lep pogled sa terase.",
+        "starNumber": 5
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Aapartman 2",
+    "description": "Opis apartmana 2",
+    "capacity": 4,
+    "size": 35,
+    "category_id": 4,
+    "equipments": [1, 2],
+    "image": "room-2.jpg",
+    "price": 99,
+    "comments": [
+      {
+        "user": "David Stevic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Ovo je bas dobar apartman.",
+        "starNumber": 5
+      },
+      {
+        "user": "Nenad Jevtic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Sve super.",
+        "starNumber": 4
+      },
+      {
+        "user": "Jovan Vasic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Lep pogled sa terase.",
+        "starNumber": 5
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Apartman 3",
+    "description": "Opis apartmana 3",
+    "capacity": 5,
+    "size": 45,
+    "category_id": 3,
+    "equipments": [1, 2, 3],
+    "image": "room-3.jpg",
+    "price": 49,
+    "comments": [
+      {
+        "user": "David Stevic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Ovo je bas dobar apartman.",
+        "starNumber": 5
+      },
+      {
+        "user": "Nenad Jevtic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Sve super.",
+        "starNumber": 4
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Apartman 4",
+    "description": "Opis apartmana 4",
+    "capacity": 3,
+    "size": 35,
+    "category_id": 1,
+    "equipments": [1, 2, 3],
+    "image": "room-4.jpg",
+    "price": 99,
+    "comments": [
+      {
+        "user": "David Stevic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Ovo je bas dobar apartman.",
+        "starNumber": 5
+      },
+      {
+        "user": "Nenad Jevtic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Sve super.",
+        "starNumber": 4
+      },
+      {
+        "user": "Jovan Vasic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Lep pogled sa terase.",
+        "starNumber": 5
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Aapartman 5",
+    "description": "Opis apartmana 5",
+    "capacity": 4,
+    "size": 35,
+    "category_id": 4,
+    "equipments": [1, 2],
+    "image": "room-5.jpg",
+    "price": 99,
+    "comments": [
+      {
+        "user": "David Stevic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Ovo je bas dobar apartman.",
+        "starNumber": 5
+      },
+      {
+        "user": "Nenad Jevtic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Sve super.",
+        "starNumber": 4
+      },
+      {
+        "user": "Jovan Vasic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Lep pogled sa terase.",
+        "starNumber": 5
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Apartman 6",
+    "description": "Opis apartmana 6",
+    "capacity": 5,
+    "size": 45,
+    "category_id": 3,
+    "equipments": [1, 2, 3],
+    "image": "room-6.jpg",
+    "price": 49,
+    "comments": [
+      {
+        "user": "David Stevic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Ovo je bas dobar apartman.",
+        "starNumber": 5
+      },
+      {
+        "user": "Nenad Jevtic",
+        "user_image" : "avatar-1.jpg",
+        "date": {
+          "day": 1,
+          "month": "august",
+          "year": 2023
+        },
+        "comment": "Sve super.",
+        "starNumber": 4
+      }
+    ]
+  }
+]

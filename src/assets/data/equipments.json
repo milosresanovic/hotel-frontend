@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Kafe aparat"
+  },
+  {
+    "id": 2,
+    "name": "Wifi"
+  },
+  {
+    "id": 3,
+    "name": "Televizor"
+  },
+  {
+    "id": 4,
+    "name": "Frižider"
+  },
+  {
+    "id": 5,
+    "name": "Sef"
+  },
+  {
+    "id": 6,
+    "name": "Fen"
+  }
+]

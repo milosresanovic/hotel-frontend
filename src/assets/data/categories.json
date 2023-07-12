@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Apartman"
+  },
+  {
+    "id": 2,
+    "name": "Studio"
+  },
+  {
+    "id": 3,
+    "name": "Predsednički apartman"
+  },
+  {
+    "id": 4,
+    "name": "Djakuzi apartman"
+  },
+  {
+    "id": 5,
+    "name": "Lux apartman"
+  }
+]

@@ -1,0 +1,33 @@
+<div class="w-95">
+  <div class="room-item max-width-100">
+    <!--<img src="{{Image}}" alt="cant find image..." style="max-width: 100%;">-->
+    <img src="assets/templateIMG/room/room-1.jpg" alt="cant find image..." max-width-100>
+    <div class="ri-text max-width-100">
+      <h4>{{Name}}</h4>
+
+      <span [innerHTML]="Price | priceColorPipe" ></span>
+
+      <table>
+        <tbody>
+        <tr>
+          <td class="r-o">Size:</td>
+          <td>{{Size}} ft</td>
+        </tr>
+        <tr>
+          <td class="r-o">Capacity:</td>
+          <td>{{MaxPersons}}</td>
+        </tr>
+        <tr>
+          <td class="r-o">Category:</td>
+          <td>{{Category}}</td>
+        </tr>
+        <tr>
+          <td class="r-o">Services:</td>
+          <td class="max-width-100">{{Equipments}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <a routerLink="/room-details/{{Id}}" class="primary-btn">More Details</a>
+    </div>
+  </div>
+</div>

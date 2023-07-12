@@ -1,0 +1,80 @@
+<section class="rooms-section spad">
+  <div class="container">
+    <!--<div class="col-lg-12 d-flex">
+      <div class="col-lg-4 ">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Search</label>
+          <input #keyword type="email"  [value]="keyword.value" (keyup)="changeKeyword(keyword.value)" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Room type</label>
+          <select class="form-control" id="exampleFormControlSelect1" (change)="changeCategory(categorySelectBox.value)" #categorySelectBox>
+            <option value="0">Choose category</option>
+            <option *ngFor="let category of categories" [value]="category.id" >{{category.name}}</option>
+          </select>
+        </div>
+      </div>
+
+    </div>-->
+    <form (ngSubmit)="searchRooms()" class="search-form">
+      <div class="form-row align-items-center">
+        <div class="col">
+          <label for="keyword">Keyword:</label>
+          <input type="text" id="keyword" name="keyword" class="form-control" [(ngModel)]="keyword">
+        </div>
+
+        <div class="col">
+          <label for="minPrice">Minimum Price:</label>
+          <input type="text" id="minPrice" name="minPrice" class="form-control" [(ngModel)]="minPrice">
+        </div>
+
+        <div class="col">
+          <label for="maxPrice">Maximum Price:</label>
+          <input type="text" id="maxPrice" name="maxPrice" class="form-control" [(ngModel)]="maxPrice">
+        </div>
+
+        <div class="col">
+          <label for="persons">Number of Persons:</label>
+          <input type="number" id="persons" name="persons" class="form-control" [(ngModel)]="personsNumber">
+        </div>
+
+        <div class="col">
+          <br>
+
+          <button type="submit" class="btn btn-primary margina-gore-dugme">Search</button>
+        </div>
+      </div>
+    </form>
+    <br><br>
+    <div class="row justify-content-start">
+
+
+      <ng-container *ngFor="let room of rooms.data">
+        <app-room-card
+            class="coll-lg-4 d-flex justify-content-center"
+                       [Id]="room.id"
+                       [Name]="room.name"
+                       [Size]="calculateArea(room.rooms)"
+                       [MaxPersons]="room.maxPersons"
+                       [Price]="room.price"
+                       [Category]="room.category"
+                       [Image]="room.images[0]"
+                       [Equipments]="equipmentsAsString(room.equipments)" >
+        </app-room-card>
+      </ng-container>
+
+
+      <div class="col-lg-12">
+        <div class="room-pagination">
+          <a href="javascript:void(0);"  (click)="previousPage()">Previous <i class="fa fa-long-arrow-left"></i></a>
+          <ng-container *ngFor="let numberOfPage of pagesCount">
+            <a href="javascript:void(0);" (click)="goToPage(numberOfPage)">{{numberOfPage}}</a>
+          </ng-container>
+          <a href="javascript:void(0);"  (click)="nextPage()">Next <i class="fa fa-long-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

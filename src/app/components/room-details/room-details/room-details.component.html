@@ -1,0 +1,108 @@
+<section class="room-details-section spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="room-details-item">
+          <!--<img class="w-100" src="{{room.images[0]}}" alt="neka slika">-->
+          <img class="w-100" src="assets/templateIMG/room/room-1.jpg" alt="neka slika">
+          <div class="rd-text">
+            <div class="rd-title">
+              <h3>{{room.name}}</h3>
+              <div class="rdt-right">
+                <div class="rating">
+                  AVG rating by people in comments:
+                  <ng-container *ngFor="let s of getNumber(calculateAverageStarNumber(room))">
+                    <i class="icon_star"></i>
+                  </ng-container>
+
+                </div>
+
+              </div>
+            </div>
+            <h2 [innerHTML]="room.price | priceColorPipe" >$<span>/Pernight</span></h2>
+            <table>
+              <tbody>
+              <tr>
+                <td class="r-o">Size:</td>
+                <td>{{room.size}} ft</td>
+              </tr>
+              <tr>
+                <td class="r-o">Capacity:</td>
+                <td>Max persion {{room.maxPersons}}</td>
+              </tr>
+              <tr>
+                <td class="r-o">Apartment type:</td>
+                <td>{{room.category}}</td>
+              </tr>
+              <tr>
+                <td class="r-o">Services:</td>
+                <td>{{equipmentsAsString(room.equipments)}}</td>
+              </tr>
+              </tbody>
+            </table>
+            <p class="f-para">{{room.description}}
+            </p>
+          </div>
+        </div>
+        <div class="rd-reviews">
+          <h4>Reviews</h4>
+          <ng-container *ngFor="let comment of room.comments">
+            <app-room-comment [User]="comment.user"
+                              [Comment]="comment.text"
+                              [Date]="comment.date"
+                              [StarNumber]="comment.starNumber" >
+            </app-room-comment>
+          </ng-container>
+
+        </div>
+
+      </div>
+      <div class="col-lg-4">
+        <div class="room-booking">
+          <h3>Your Reservation</h3>
+          <form [formGroup]="makeReservation" (ngSubmit)="makeReservationSubmit()" >
+            <div class="check-date">
+              <label for="date-in">Check In:</label>
+              <input type="date" class="date-input" id="date-in" formControlName="dateIn">
+              <div *ngIf="makeReservation.get('dateIn')?.invalid && (makeReservation.get('dateIn')?.dirty || makeReservation.get('dateIn')?.touched)">
+                <div *ngIf="makeReservation.get('dateIn')?.errors?.['required']" class="text-danger">Pick-up date is required.</div>
+                <div *ngIf="makeReservation.get('dateIn')?.errors?.['startDateInPast']" class="text-danger">Pick-up date cannot be in the past.</div>
+                <div *ngIf="makeReservation.get('dateIn')?.errors?.['invalid']" class="text-danger">Pick-up date is invalid.</div>
+              </div>
+            </div>
+            <div class="check-date">
+              <label for="date-out">Check Out:</label>
+              <input type="date" class="date-input" id="date-out" formControlName="dateOut">
+              <div *ngIf="makeReservation.get('dateOut')?.invalid && (makeReservation.get('dateOut')?.dirty || makeReservation.get('dateOut')?.touched)">
+                <div *ngIf="makeReservation.get('dateOut')?.errors?.['required']" class="text-danger">Drop-off date is required.</div>
+                <div *ngIf="makeReservation.get('dateOut')?.errors?.['endDateLessThanStartDate']" class="text-danger">Drop-off date should be later than pick-up date.</div>
+                <div *ngIf="makeReservation.get('dateOut')?.errors?.['invalid']" class="text-danger">Drop-off date is invalid.</div>
+                <div *ngIf="makeReservation.get('dateOut')?.errors?.['endDateLessThanCurrentDate']" class="text-danger">DateEnd must be lover then current date.</div>
+              </div>
+            </div>
+            <div class="elect-options">
+              <label for="guest">Guests number:</label><br/>
+              <select class="nice-select w-100" id="guest"  formControlName="personsNumber">
+                <option *ngFor="let n of getNumberRange(room.maxPersons)" value="{{n}}">
+                  {{n}} {{ n === 1 ? 'Adult' : 'Adults' }}
+                </option>
+              </select>
+            </div><br/><br/>
+
+            <span class="text-danger">{{reservationError}}</span>
+            <span class="text-success">{{reservationsSuccess}}</span>
+
+            <span *ngIf="isLoggedIn()">
+              <span #reservationError></span>
+              <button type="submit" [disabled]="!makeReservation.valid">Make Reservation</button>
+            </span>
+
+            <span *ngIf="!isLoggedIn()">
+              <a class="text-center" routerLink="/login">Login to make reservation</a>
+            </span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

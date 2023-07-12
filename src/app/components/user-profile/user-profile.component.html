@@ -1,0 +1,41 @@
+<section class="margina-50">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form [formGroup]="updateForm" (ngSubmit)="updateUserProfile()" enctype="multipart/form-data">
+          <!-- Form fields here -->
+          <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" formControlName="firstName" [(ngModel)]="firstName" id="firstName" name="firstName" required>
+            <div *ngIf="updateForm.get('firstName')?.invalid && (updateForm.get('firstName')?.dirty || updateForm.get('firstName')?.touched)">
+              <div *ngIf="updateForm.get('firstName')?.errors?.['required']" class="text-danger">FirstName is required.</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName" [(ngModel)]="lastName" id="lastName" name="lastName" required>
+            <div *ngIf="updateForm.get('lastName')?.invalid && (updateForm.get('lastName')?.dirty || updateForm.get('lastName')?.touched)">
+              <div *ngIf="updateForm.get('lastName')?.errors?.['required']" class="text-danger">LastName is required.</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" formControlName="username" [(ngModel)]="username" id="username" name="username" required>
+            <div *ngIf="updateForm.get('username')?.invalid && (updateForm.get('username')?.dirty || updateForm.get('username')?.touched)">
+              <div *ngIf="updateForm.get('username')?.errors?.['required']" class="text-danger">Username is required.</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email CANT be changed</label>
+            <input type="text" class="form-control"  id="Email" name="username" disabled required value="email">
+          </div>
+          <div class="mb-3">
+            <label for="image" class="form-label">Profile Image</label>
+            <input (change)="handleImageInput($event)" type="file" class="form-control" id="image" name="image">
+          </div>
+          <button type="submit" class="btn btn-primary">Update profile</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

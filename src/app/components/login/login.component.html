@@ -1,0 +1,26 @@
+<section class="margina-50">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required formControlName="email">
+            <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">
+              <div *ngIf="loginForm.get('email')?.errors?.['required']" class="text-danger">Email is required.</div>
+              <div *ngIf="loginForm.get('email')?.errors?.['email']" class="text-danger">Email format is incorrect.</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required formControlName="password">
+            <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+              <div *ngIf="loginForm.get('password')?.errors?.['required']" class="text-danger">Password is required.</div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

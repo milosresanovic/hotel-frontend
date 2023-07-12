@@ -1,0 +1,17 @@
+<div class="review-item">
+  <!--<div class="ri-pic">
+    <img src="../../../../assets/templateIMG/room/avatar/{{Image}}" alt="">
+  </div>-->
+  <div class="ri-text">
+    <span>
+      {{Date.day}} {{Date.month}} {{Date.year}}
+    </span>
+    <div class="rating">
+      <ng-container *ngFor="let s of getNumber(StarNumber)">
+        <i class="icon_star"></i>
+      </ng-container>
+    </div>
+    <h5>{{User}}</h5>
+    <p>{{Comment}}</p>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "icon": "flaticon-036-parking",
+    "name": "Travel Plan",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+  },
+  {
+    "id": 2,
+    "icon": "flaticon-033-dinner",
+    "name": "Catering Service",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+  },
+  {
+    "id": 3,
+    "icon": "flaticon-026-bed",
+    "name": "Babysitting",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+  },
+  {
+    "id": 4,
+    "icon": "flaticon-024-towel",
+    "name": "Laundry",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+  },
+  {
+    "id": 5,
+    "icon": "flaticon-044-clock-1",
+    "name": "Hire Driver",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+  },
+  {
+    "id": 6,
+    "icon": "flaticon-012-cocktail",
+    "name": "Bar & Drink",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+  }
+]
